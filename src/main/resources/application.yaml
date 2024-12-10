@@ -1,1 +1,2 @@
-spring.application.name=wedding_host
+server:
+  port: 8089
