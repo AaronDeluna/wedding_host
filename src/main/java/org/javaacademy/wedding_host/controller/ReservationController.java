@@ -31,7 +31,7 @@ public class ReservationController {
 
     @GetMapping("/month/{month}/free")
     public ReservationCountResponse getReservationCountByMonth(@PathVariable Integer month) {
-        ReservationCountResponse countResponse = new ReservationCountResponse();
+        ReservationCountResponse countResponse = new ReservationCountResponse(month);
         countResponse.setCount(reservationService.getReservationCountByMonth(month));
         return countResponse;
     }
