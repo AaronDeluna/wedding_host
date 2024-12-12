@@ -2,7 +2,7 @@ package org.javaacademy.wedding_host.service;
 
 import lombok.RequiredArgsConstructor;
 import org.javaacademy.wedding_host.dto.ReservationDto;
-import org.javaacademy.wedding_host.entity.ReservationRequest;
+import org.javaacademy.wedding_host.dto.ReservationRequest;
 import org.javaacademy.wedding_host.mapper.ReservationMapper;
 import org.javaacademy.wedding_host.repository.ReservationRepository;
 import org.springframework.stereotype.Service;

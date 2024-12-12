@@ -2,7 +2,7 @@ package org.javaacademy.wedding_host.mapper;
 
 import org.javaacademy.wedding_host.dto.ReservationDto;
 import org.javaacademy.wedding_host.entity.Reservation;
-import org.javaacademy.wedding_host.entity.ReservationRequest;
+import org.javaacademy.wedding_host.dto.ReservationRequest;
 import org.springframework.stereotype.Component;
 
 @Component

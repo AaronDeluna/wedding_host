@@ -1,4 +1,4 @@
-package org.javaacademy.wedding_host.entity;
+package org.javaacademy.wedding_host.dto;
 
 import lombok.Data;
 
