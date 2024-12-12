@@ -38,10 +38,6 @@ public class ReservationController {
 
     @PostMapping
     public void createNewReservation(@RequestBody ReservationRequest reservationRequest) {
-        reservationService.createReservation(new ReservationDto(
-                reservationRequest.getMonth(),
-                reservationRequest.getDay(),
-                true)
-        );
+        reservationService.createReservation(reservationRequest);
     }
 }

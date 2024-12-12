@@ -2,6 +2,7 @@ package org.javaacademy.wedding_host.mapper;
 
 import org.javaacademy.wedding_host.dto.ReservationDto;
 import org.javaacademy.wedding_host.entity.Reservation;
+import org.javaacademy.wedding_host.entity.ReservationRequest;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -20,6 +21,14 @@ public class ReservationMapper {
                 reservation.getMonthNumber(),
                 reservation.getDayNumber(),
                 reservation.isBooked()
+        );
+    }
+
+    public ReservationDto convertToDtoFromRequest(ReservationRequest request) {
+        return new ReservationDto(
+                request.getMonth(),
+                request.getDay(),
+                true
         );
     }
 

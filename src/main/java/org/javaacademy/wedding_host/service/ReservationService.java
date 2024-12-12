@@ -2,6 +2,7 @@ package org.javaacademy.wedding_host.service;
 
 import lombok.RequiredArgsConstructor;
 import org.javaacademy.wedding_host.dto.ReservationDto;
+import org.javaacademy.wedding_host.entity.ReservationRequest;
 import org.javaacademy.wedding_host.mapper.ReservationMapper;
 import org.javaacademy.wedding_host.repository.ReservationRepository;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,8 @@ public class ReservationService {
     private final ReservationRepository reservationRepository;
     private final ReservationMapper reservationMapper;
 
-    public void createReservation(ReservationDto reservationDto) {
+    public void createReservation(ReservationRequest reservationRequest) {
+        ReservationDto reservationDto = reservationMapper.convertToDtoFromRequest(reservationRequest);
         reservationRepository.save(reservationMapper.convertToEntity(reservationDto));
     }
 
